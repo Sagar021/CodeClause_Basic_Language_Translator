@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Language Translator</title>
+
+    <!-- fontAwesome Icons -->
+    <script src="https://kit.fontawesome.com/922693131f.js" crossorigin="anonymous"></script>
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300&family=Open+Sans:wght@300&family=Poppins:wght@200&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+
+<body>
+    <div class="main-heading">
+        <h1>Viola Language Translator</h1>
+    </div>
+    <div class="container">
+        <div class="card input-wrapper">
+            <div class="from">
+                <span class="heading">From : </span>
+                <!-- Custom Select -->
+                <div class="dropdown-container "    id="input-language">
+                    <div class="dropdown-toggle">
+                        <i class="fa-solid fa-globe"></i>
+                        <span class="selected" data-value="auto">
+                            Auto Detect
+                        </span>
+                        <i class="fa-solid fa-angle-down"></i>
+                    </div>
+                    <ul class="dropdown-menu">
+                        <li class="option acitve">Option 1</li>
+                        <li class="option">Option 2</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="text-area">
+                <textarea id="input-text" cols="30" rows="10" placeholder="Enter your text here"></textarea>
+                <div class="chars">
+                    <span id="input-chars">0</span>
+                   /5000
+                </div>
+            </div>
+            <div class="card-bottom">
+                <p>Or choose your Document</p>
+                <label for="upload-document">
+                    <span id="upload-title">Choose File</span>
+                    <i class="fa-solid fa-cloud-arrow-up"></i>
+                    <input type="file" id="upload-document" hidden/>
+                </label>
+            </div>
+        </div>
+        <div class="center">
+            <div class="swap-position">
+                <i class="fa-solid fa-arrow-right-arrow-left"></i>
+            </div>
+        </div>
+        <div class="card output-wrapper">
+            <div class="to">
+                <span class="heading">TO : </span>
+                <!-- Custom Select -->
+                <div class="dropdown-container "    id="output-language">
+                    <div class="dropdown-toggle">
+                        <i class="fa-solid fa-globe"></i>
+                        <span class="selected" data-value="en">
+                            English
+                        </span>
+                        <i class="fa-solid fa-angle-down"></i>
+                    </div>
+                    <ul class="dropdown-menu">
+                        <li class="option acitve">Option 1</li>
+                        <li class="option">Option 2</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="text-area">
+                <textarea id="output-text" cols="30" rows="10" placeholder="Translated text . . ."></textarea>
+            </div>
+            <div class="card-bottom">
+                <p>Or download the Document</p>
+                <button id="download-document">
+                    <span>Download</span>
+                    <i class="fa-solid fa-cloud-arrow-down"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- script -->
+    <script src="languages.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
